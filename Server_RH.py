@@ -10,12 +10,18 @@ import socket
 import thread
 import select
 import message
+import Queue
+import mediator
+from controls import DriverControl
+from drivers import Driver
 
 
-SERVER_ADDRESS = ('localhost', 8000)
-TIMEOUT = 3
+SERVER_ADDRESS = ('localhost', 9000)
+TIMEOUT = 120
+UPDATE_PRIORITY = 1
+REQUEST_PRIORITY = 0
 
-logging.basicConfig(level=logging.INFO,
+logging.basicConfig(level=logging.DEBUG,
                     format='%(name)s: %(message)s',
                     )
 
@@ -27,10 +33,10 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
     #def setup(): sets up self.rfile for reading and self.wfile for writing)
     #buffer for rfile is default of 8192, wfile is 0 or unbuffered so DON'T NEED TO USE FLUSH as normally would
     #with files
-    #additionally setup() calls socket.settimeout(timeout) to set the wait time for
-    #a read call but this cannot be used with file objects since, they share the blocking attribute, but not the timeout
-    #time
 
+    @staticmethod
+    def add_mediator(self, mediator):
+        MyRequestHandler.mediator = mediator
 
 
     def handle(self):
@@ -59,6 +65,7 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
         #will log successful login as well, changes and returns socket.settimeout() to original value
         #sends
         if not self.check_password():
+            self.logger.info('incorrect login closing connection')
             return
 
 
@@ -67,27 +74,15 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
         self.logger.info('received %s request' % client_request.type)
 
         self.send()
-        while client_request.type != "end":
+        while True:
 
 
-        #switch on type of request, processing each request returns a message object that can be passed directly to send
-                if client_request.type == "status":
-                    #fill in later with motor control
-                    self.send(self.status_request(client_request.data))
+            self.relay_request(client_request)
 
-                elif client_request.type == "toggle":
-                    #call motor control
-                    self.send(self.toggle_request(client_request.data))
+            client_request = self.receive()
+            print "received %s request" % client_request
+            self.send()
 
-
-                elif client_request.type == "timer":
-                    self.timer_request(client_request.data)
-
-                elif client_request.type == "schedule":
-                    self.send(self.schedule_request(client_request.data))
-
-                else:
-                    pass
 
     def status_request(self, data):
         return message.Message('Status', ['status of data'])
@@ -97,6 +92,15 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
         return message.Message('reject/accept', ['new status'])
     def schedule_request(self, data):
         return message.Message('reject/accept', ['new status'])
+    def end_request(self, data):
+        return message.Message('end', ['closing connection'])
+
+    def relay_request(self, client_request):
+        #might change to different object for mediator to process
+        mediator.process(client_request)
+
+
+
 
 
 
@@ -151,7 +155,7 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
             #timeout will return false for check_password if timeout error occurs, which then causes handle method
             # to return to server.finish_request for MyRequestHandler.finish() request to be called and socket closed
             except socket.timeout as timeout:
-                self.logger.info('timeout by: %s' % self.client_address)
+                self.logger.info('timeout by: %s %s' % self.client_address)
                 return False
 
             else:
@@ -194,12 +198,36 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
 
 
 class MyServer(SocketServer.ThreadingTCPServer):
+
+    def __init__(self, server_address, request_handler):
+        SocketServer.ThreadingTCPServer.__init__(self, server_address, request_handler)
+
+        
+'''using modular import for mediator class instead
+class Mediator(object):
+
+    def __init__(self, call_object):
+        self.queue = Queue.Queue()
+        self.caller
+
+    def process(self, task):
+        self.queue.put(task)
+
+    def _do_tasks(self):
+        while True:
+            task = self.queue.get(True)
+            self.caller.task.action(*task.args)
+'''
+
+class Fake_Motor_Control(object):
     pass
 
 
 
-
-
+drivers = [Driver.Driver(chip=None, channel=i) for i in range(0,8)]
+motor_control = DriverControl.DriverControl(drivers=drivers)
+mediator = mediator.Mediator(motor_control)
+MyRequestHandler.add_mediator(mediator)
 
 Rpi_Server = MyServer(SERVER_ADDRESS, MyRequestHandler)
 threading.Thread(target=Rpi_Server.serve_forever).start()

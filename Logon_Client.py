@@ -1,11 +1,12 @@
 __author__ = 'Eric'
 
 import socket
-import cPickle
+from cPickle import dump, load
 import pprint
 import message
 
-SERVER_ADDRESS = ('localhost', 8000)
+
+SERVER_ADDRESS = ('localhost', 9000)
 SOCKET_TIMEOUT = 3
 
 
@@ -36,16 +37,18 @@ class Logon_Client(object):
 
 
     def send(self, to_server):
-        cPickle.dump(to_server, self.wfile)
+        dump(to_server, self.wfile)
 
     #put error methods here
     def receive(self):
         try:
-            return cPickle.load(self.rfile)
+            return load(self.rfile)
         except socket.timeout as e:
             print 'socket timeout: %s' % e
+            return False
         except EOFError as e:
             print 'no pickle sent to load: %s' % e
+            return False
 
     def login(self):
 
@@ -72,10 +75,18 @@ class Logon_Client(object):
 
     def handle(self):
 
-        response = self.receive()
 
-        while(response.type != 'close'):
-            pass
+
+        while True:
+            command = raw_input('Enter command(status, toggle, timer, schedule, end): ')
+            data = []
+            dump(message.Message(command, data), self.wfile, 2)
+            acknowledge = self.receive()
+            print 'acknowledge received'
+            response = self.receive()
+            print response
+            if (response.type == 'end'):
+                return
 
 
 if __name__ == '__main__':
