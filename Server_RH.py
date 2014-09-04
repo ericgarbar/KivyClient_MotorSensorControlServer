@@ -18,12 +18,12 @@ from drivers import Driver
 
 SERVER_ADDRESS = ('localhost', 9000)
 TIMEOUT = 120
-UPDATE_PRIORITY = 1
-REQUEST_PRIORITY = 0
 
 logging.basicConfig(level=logging.DEBUG,
                     format='%(name)s: %(message)s',
                     )
+
+console_log = logging.StreamHandler().setLevel(logging.INFO)
 
 
 class MyRequestHandler(SocketServer.StreamRequestHandler):
@@ -35,19 +35,44 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
     #with files
 
     @staticmethod
-    def add_mediator(self, mediator):
+    def add_mediator(mediator):
         MyRequestHandler.mediator = mediator
 
+    #send to_client parameter client pickling and then dumping into self.wfile
+    def send(self, type, data):
+        to_client_message = message.Message(type, data)
+        cPickle.dump(to_client_message, self.wfile, 2)
+        client_ack = self.receive()
+        if (client_ack.type != 'ack'):
+            raise Exception
+
+    #returns unpickled object from socket connection
+    #will be a request from client as message object
+    #message has two fields type and data
+    def receive(self):
+        try:
+            return cPickle.load(self.rfile)
+        except EOFError as e:
+            self.logger.error('no pickle sent to load: %s' % e)
+
+    #send back to acknowledge request received
+    def acknowledge(self):
+        acknowledgement = ("ack", ['time_sent_ack', 'time_rec_message'])
+        self.send(*acknowledgement)
+        self.logger.info('acknowledge pickled and sent: %s' % acknowledgement)
+
+    def relay_request(self, client_request):
+        #might change to different object for mediator to process
+        return mediator.process_request(client_request)
 
     def handle(self):
 
         #create logger with client_address prop of socket/request which is initialized in __init__
         # if login is successful will change logger name to the user who logged in
         self.logger = logging.getLogger(str(self.client_address))
-
         #setting timeout on socket, so that if readline is called and no information is received in 3 seconds then
         #error is raised
-
+        self.logger.addHandler(console_log)
         #users is dictionary of allowable user names and corresponding passwords
         #probably should go somewhere else eventually, encrypted file or something...
         self.users = {'gardener':'', 'gardener2':'gardengarden'}
@@ -55,9 +80,9 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
         MyRequestHandler.total_clients += 1
         #communication loop
 
-        acknowledge = message.Message('ack', ['time received request', 'time sent response'])
-        self.send(acknowledge)
-        self.logger.info('acknowledge pickled and sent: %s' % acknowledge)
+
+        self.acknowledge()
+
 
         #returns false if too many incorrect password tries, login timesout, or socket read times out
         #handles error logging in method
@@ -73,17 +98,18 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
         client_request = self.receive()
         self.logger.info('received %s request' % client_request.type)
 
-        self.send()
-        while True:
+        self.acknowledge()
+        while client_request.type != "end":
 
 
-            self.relay_request(client_request)
+            response = self.relay_request(client_request)
+            self.send(response)
 
             client_request = self.receive()
             print "received %s request" % client_request
-            self.send()
+            self.acknowledge()
 
-
+    '''
     def status_request(self, data):
         return message.Message('Status', ['status of data'])
     def toggle_request(self, data):
@@ -93,11 +119,9 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
     def schedule_request(self, data):
         return message.Message('reject/accept', ['new status'])
     def end_request(self, data):
-        return message.Message('end', ['closing connection'])
+        return message.Message('end', ['closing connection'])'''
 
-    def relay_request(self, client_request):
-        #might change to different object for mediator to process
-        mediator.process(client_request)
+
 
 
 
@@ -186,15 +210,7 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
         SocketServer.StreamRequestHandler.finish(self)
         MyRequestHandler.total_clients -= 1
 
-    #send to_client parameter client pickling and then dumping into self.wfile
-    def send(self, to_client=message.Message(['ack', ['timesent']])):
-        cPickle.dump(to_client, self.wfile, 2)
 
-    def receive(self):
-        try:
-            return cPickle.load(self.rfile)
-        except EOFError as e:
-            self.logger.error('no pickle sent to load: %s' % e)
 
 
 class MyServer(SocketServer.ThreadingTCPServer):
@@ -226,7 +242,7 @@ class Fake_Motor_Control(object):
 
 drivers = [Driver.Driver(chip=None, channel=i) for i in range(0,8)]
 motor_control = DriverControl.DriverControl(drivers=drivers)
-mediator = mediator.Mediator(motor_control)
+mediator = mediator.mediator(motor_control)
 MyRequestHandler.add_mediator(mediator)
 
 Rpi_Server = MyServer(SERVER_ADDRESS, MyRequestHandler)

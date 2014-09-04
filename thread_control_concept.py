@@ -88,7 +88,7 @@ class controller(object):
         self.my_motors[data] = 'off'
         return 'motor%d: turned off' % data
 
-    def toggle(self, data):
+    def toggle_state(self, data):
         if self.my_motors[data] == 'on':
             self.my_motors[data] = 'off'
         else: self.my_motors[data] == 'on'

@@ -6,12 +6,11 @@ import threading
 
 
 
-
 class mediator(object):
+
 
     def __init__(self, control):
         self.control = control
-        self.control_commands = control.get_commands()
         self.task_queue = Queue.PriorityQueue()
         self.stay_alive = threading.Event()
         self.stay_alive.set()
@@ -26,18 +25,20 @@ class mediator(object):
             'off':0,
             'toggle':0,
             'update':1
-}
+        }
 
         self.CONTROL_COMMANDS = {
             'on' : self.control.turn_on,
             'off' : self.control.turn_off,
-            'toggle': self.control.toggle,
+            'toggle': self.control.toggle_state,
             'update': self.control.update,
         }
 
+
+
     #maybe need to do lock and release for access the class mediator, worked ok in test
     #of twenty users, just with threads not in predictable chronological order
-    def relay_task(self, user_task):
+    def process_request(self, user_task):
         #signal is triggered upon completion of task
         signal = threading.Event()
         #put in task queue

@@ -24,6 +24,9 @@ class DriverControl(object):
         #put names of drivers in list, then join into one long string concatenated string
         return "\n".join([": ".join([d.get_name(), d.state]) for d in self.drivers])
 
+    def update(self):
+        return self.__str__()
+
 
     #toggle_state checks state of passed driverid and then hands off to appropriate turn_on, turn_off method
     #and returns new state, bookkeeping is done in turn_off, turn_on including checking if at max drivers
@@ -60,6 +63,8 @@ class DriverControl(object):
             self.drivers[driverid].state = 'Off'
             self.total_drivers_on -= 1
             return True
+
+
 
 
 

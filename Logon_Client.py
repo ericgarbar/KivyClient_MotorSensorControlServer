@@ -36,8 +36,8 @@ class Logon_Client(object):
 
 
 
-    def send(self, to_server):
-        dump(to_server, self.wfile)
+    def send(self, task_to_server):
+        dump(task_to_server, self.wfile)
 
     #put error methods here
     def receive(self):
@@ -60,6 +60,7 @@ class Logon_Client(object):
 
 
             response = self.receive()
+            print response
             if (response.data[0] == 's'):
                 print 'login success: %s' % response
                 return True
