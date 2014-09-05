@@ -23,7 +23,6 @@ logging.basicConfig(level=logging.DEBUG,
                     format='%(name)s: %(message)s',
                     )
 
-console_log = logging.StreamHandler().setLevel(logging.INFO)
 
 
 class MyRequestHandler(SocketServer.StreamRequestHandler):
@@ -44,82 +43,66 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
         cPickle.dump(to_client_message, self.wfile, 2)
         client_ack = self.receive()
         if (client_ack.type != 'ack'):
-            raise Exception
+            print client_ack.type, 'not equal ack'
+        print 'acknowledge received'
+
 
     #returns unpickled object from socket connection
     #will be a request from client as message object
     #message has two fields type and data
     def receive(self):
         try:
-            return cPickle.load(self.rfile)
+            response = cPickle.load(self.rfile)
         except EOFError as e:
             self.logger.error('no pickle sent to load: %s' % e)
+        else:
+            self.acknowledge()
+            return response
 
     #send back to acknowledge request received
     def acknowledge(self):
-        acknowledgement = ("ack", ['time_sent_ack', 'time_rec_message'])
-        self.send(*acknowledgement)
-        self.logger.info('acknowledge pickled and sent: %s' % acknowledgement)
+        acknowledgement = message.Message("ack", ['time_sent_ack', 'time_rec_message'])
+        cPickle.dump(acknowledgement, self.wfile, 2)
+        self.logger.info('acknowledge pickled and sent')
 
     def relay_request(self, client_request):
         #might change to different object for mediator to process
-        return mediator.process_request(client_request)
+        return message.Message('motor_response', mediator.process_request(client_request))
 
     def handle(self):
 
         #create logger with client_address prop of socket/request which is initialized in __init__
         # if login is successful will change logger name to the user who logged in
         self.logger = logging.getLogger(str(self.client_address))
-        #setting timeout on socket, so that if readline is called and no information is received in 3 seconds then
-        #error is raised
-        self.logger.addHandler(console_log)
+
         #users is dictionary of allowable user names and corresponding passwords
         #probably should go somewhere else eventually, encrypted file or something...
         self.users = {'gardener':'', 'gardener2':'gardengarden'}
 
-        MyRequestHandler.total_clients += 1
-        #communication loop
+        MyRequestHandler.total_clients += 1 #increase to reflect new number of users logged in
 
 
-        self.acknowledge()
+        self.acknowledge() #send acknowledge ment to know connection successful
+        self.logger.debug('acknowledge successful connection')
 
-
-        #returns false if too many incorrect password tries, login timesout, or socket read times out
-        #handles error logging in method
-        #return goes back to __init__ call where finish is then called to clean up socket, files, etc
-        #will log successful login as well, changes and returns socket.settimeout() to original value
-        #sends
         if not self.check_password():
             self.logger.info('incorrect login closing connection')
-            return
+            return #return goes back to __init__ call where finish is then called to clean up socket, files, etc
 
 
         #receive can throw timeout error
         client_request = self.receive()
         self.logger.info('received %s request' % client_request.type)
 
-        self.acknowledge()
         while client_request.type != "end":
-
-
             response = self.relay_request(client_request)
-            self.send(response)
+            self.send(response.type, response)
 
             client_request = self.receive()
             print "received %s request" % client_request
             self.acknowledge()
 
-    '''
-    def status_request(self, data):
-        return message.Message('Status', ['status of data'])
-    def toggle_request(self, data):
-        return message.Message('reject/accept', ['new status'])
-    def timer_request(self, data):
-        return message.Message('reject/accept', ['new status'])
-    def schedule_request(self, data):
-        return message.Message('reject/accept', ['new status'])
-    def end_request(self, data):
-        return message.Message('end', ['closing connection'])'''
+
 
 
 
@@ -132,6 +115,8 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
 
     #checks user password parameters against self.user dict, where user = key, password = value
     #returns s for succes, u for incorrect user, p for incorrect password
+    #will log successful login as well, changes and returns socket.settimeout() to original value
+    #sends
     def check_user(self, user, password):
         #possibly more type checks before evaluating password to compare
         #possible to maybe unpickle and execute sent malicious code at this point
@@ -143,10 +128,6 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
             return 'u'
         else:
             return 'p'
-
-
-
-
 
     def check_password(self):
 
@@ -163,25 +144,23 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
 
         while(attempts < 10 and time.time()-starttime < 180):
             attempts += 1
-            self.logger.info('login attempts %d' % attempts)
+            self.logger.info('login attempt %d' % attempts)
             try:
-                #load automatically reads exactly one pickle from file and unloads it back into object form
-                request =  self.receive()
-                self.logger.info('message loaded and unPickled: %s' % request)
+                request =  self.receive() #request type is 'login', data = [username, password]
+                self.logger.info('request loaded and unPickled: %s' % request)
 
             #need to print tracebacks for errors in log, and catch all network/unpickling errors
+            #timeout will return false for check_password if timeout error occurs, which then causes handle method
+            #to return to server.finish_request for MyRequestHandler.finish() request to be called and socket closed
             except EOFError as e:
                 self.logger.error('eof error: %s' % request)
                 return False
             except ImportError as e:
                 self.logger.error('import error', time.time(), )
                 return False
-            #timeout will return false for check_password if timeout error occurs, which then causes handle method
-            # to return to server.finish_request for MyRequestHandler.finish() request to be called and socket closed
             except socket.timeout as timeout:
                 self.logger.info('timeout by: %s %s' % self.client_address)
                 return False
-
             else:
                 #client will send info such that user_data[0] = "username", user_data[1] = "password"
                 user_data = request.data
@@ -189,26 +168,27 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
                 if (login_attempt == 's'):
                     self.logger.info('login successful for user: ' + user_data[0])
                     self.logger.info('change logger name to: ' + user_data[0])
+                    self.logger.info('resetting socket timeout to default')
                     self.logger.name = user_data[0]
                     self.request.settimeout(TIMEOUT)
-                    self.send(message.Message('accept', ['s']))
+                    self.send('accept', ['s'])
                     return True
                 elif (login_attempt == 'u'):
                     self.logger.info('incorrect username: ' + user_data[0])
-                    response = message.Message('reject',['u'])
-                    self.send(response)
-                    self.logger.info('pickled and sent response: %s' % response)
+                    self.send('reject', ['u'])
+                    self.logger.info('pickled and sent response rejection response')
                 elif (login_attempt == 'p'):
                     self.logger.info('incorrect password with user: ' + user_data[0])
-                    self.send(message.Message('reject',['p']))
+                    self.send('reject', ['p'])
         self.logger.info('login failed')
         self.send(message.Message('close', ['login fail']))
         self.request.settimeout(TIMEOUT)
         return False
 
     def finish(self):
-        SocketServer.StreamRequestHandler.finish(self)
         MyRequestHandler.total_clients -= 1
+        SocketServer.StreamRequestHandler.finish(self)
+
 
 
 

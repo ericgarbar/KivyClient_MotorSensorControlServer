@@ -59,11 +59,12 @@ class mediator(object):
             #set timeout and block instead of not block so that it is not constantly cycling as well
             try:
                 user_task, signal = self.task_queue.get(True, 0.1)[1]
+                print 'from queue', user_task
             except Queue.Empty as e:
                 #set to be woken up by queue when it is not empty
                 #then continue
                 continue
-            user_task.response = self.CONTROL_COMMANDS[user_task.command](user_task.data)
+            user_task.response = self.CONTROL_COMMANDS[user_task.type](*user_task.data)
             signal.set()
 
 

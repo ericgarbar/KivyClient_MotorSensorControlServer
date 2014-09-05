@@ -18,18 +18,19 @@ class Logon_Client(object):
         self.connection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.connection.settimeout(SOCKET_TIMEOUT)
 
-        try:
+        try: #try to connect to server
             self.connection.connect(SERVER_ADDRESS)
         except socket.error:
             print 'connection failed'
             exit(1)
-        else:
+        else: #create wfile for writing and rfile for reading pickled objects from
             self.wfile = self.connection.makefile('wb', 0)
             self.rfile = self.connection.makefile('rb', -1)
             print'socket created with read and write file interface'
             print self.rfile
-            response = self.receive()
-            if response.type == 'ack':
+            first_ack = load(self.rfile) #give acknowledgement to send password
+
+            if first_ack.type == 'ack':
                 print 'received server acknowledgement'
             else:
                 raise socket.error
@@ -38,17 +39,31 @@ class Logon_Client(object):
 
     def send(self, task_to_server):
         dump(task_to_server, self.wfile)
+        acknowledgement = load(self.rfile)
+        if (acknowledgement.type != 'ack'):
+            print 'acknowledged not received', acknowledgement
+        print 'acknowledge received', acknowledgement
 
     #put error methods here
     def receive(self):
         try:
-            return load(self.rfile)
+            from_server = load(self.rfile)
         except socket.timeout as e:
             print 'socket timeout: %s' % e
             return False
         except EOFError as e:
             print 'no pickle sent to load: %s' % e
             return False
+        else:
+            self.acknowledge()
+            print 'sent acknowledgement'
+            return from_server
+
+        #send back to acknowledge request received
+    def acknowledge(self):
+        acknowledgement = message.Message("ack", ['time_sent_ack', 'time_rec_message'])
+        dump(acknowledgement, self.wfile, 2)
+        #self.logger.info('acknowledge pickled and sent: %s %s' % acknowledgement)
 
     def login(self):
 
@@ -80,10 +95,8 @@ class Logon_Client(object):
 
         while True:
             command = raw_input('Enter command(status, toggle, timer, schedule, end): ')
-            data = []
-            dump(message.Message(command, data), self.wfile, 2)
-            acknowledge = self.receive()
-            print 'acknowledge received'
+            data = int(raw_input('select motor: '))
+            self.send(message.Message(command, [data]))
             response = self.receive()
             print response
             if (response.type == 'end'):

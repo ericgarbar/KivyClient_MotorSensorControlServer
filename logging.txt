@@ -1,0 +1,2 @@
+DEBUG:root:log message in the file
+DEBUG:root:log message in the file
