@@ -44,7 +44,8 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
 
         client_ack = cPickle.load(self.rfile)
         if (client_ack.type != 'ack'):
-            self.logger
+            self.logger.debug('message sent to client but acknowledgement not received')
+        self.logger.debug('message sent to client and acknowledgement received')
 
 
     #returns unpickled object from socket connection
@@ -101,7 +102,7 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
 
             client_request = self.receive()
             print "received %s request" % client_request
-            self.acknowledge()
+
 
 
 
@@ -199,26 +200,6 @@ class MyServer(SocketServer.ThreadingTCPServer):
 
     def __init__(self, server_address, request_handler):
         SocketServer.ThreadingTCPServer.__init__(self, server_address, request_handler)
-
-        
-'''using modular import for mediator class instead
-class Mediator(object):
-
-    def __init__(self, call_object):
-        self.queue = Queue.Queue()
-        self.caller
-
-    def process(self, task):
-        self.queue.put(task)
-
-    def _do_tasks(self):
-        while True:
-            task = self.queue.get(True)
-            self.caller.task.action(*task.args)
-'''
-
-class Fake_Motor_Control(object):
-    pass
 
 
 
