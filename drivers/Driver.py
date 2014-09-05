@@ -5,7 +5,7 @@ import time
 
 class Driver(object):
     id = 0
-    def __init__(self, chip=None, drivers=None, name='Driver', channel=None, time_limit_on=False, **kwargs):
+    def __init__(self, chip=None, name='Driver', channel=None, time_limit_on=False, **kwargs):
         super(Driver, self).__init__(**kwargs)
 
         #chip will provide interface to the hardware so driver can turn itself off and on in physical world
@@ -19,7 +19,7 @@ class Driver(object):
         #rename to include current id #, can't pass in arguments since it is binded at time of class creation so it will
         #always be 0
         self.name = name
-        if self.name == 'Driver': self.name="{} {}".format(self.name, Driver.id)
+        if self.name == 'Driver': self.name += '%d' % Driver.id
         self.id = Driver.id
         Driver.id += 1
 

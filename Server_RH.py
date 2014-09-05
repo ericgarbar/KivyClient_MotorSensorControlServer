@@ -88,20 +88,18 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
         self.logger.debug('acknowledge successful connection')
 
         if not self.check_password():
-            self.logger.info('incorrect login closing connection')
+            self.logger.error('incorrect login closing connection')
             return #return goes back to __init__ call where finish is then called to clean up socket, files, etc
 
 
         #receive can throw timeout error
         client_request = self.receive()
-        self.logger.info('received %s request' % client_request.type)
-
+        assert client_request!=None
         while client_request.type != "end":
-            response = self.relay_request(client_request)
+            response = self.relay_request(client_request) #returns tuple for values to send
             self.send(*response)
-
             client_request = self.receive()
-            print "received %s request" % client_request
+
 
 
 
@@ -117,7 +115,6 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
 
     #checks user password parameters against self.user dict, where user = key, password = value
     #returns s for succes, u for incorrect user, p for incorrect password
-
     def check_user(self, user, password):
         #possibly more type checks before evaluating password to compare
         #possible to maybe unpickle and execute sent malicious code at this point
