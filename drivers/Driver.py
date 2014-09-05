@@ -5,8 +5,7 @@ import time
 
 class Driver(object):
     id = 0
-    def __init__(self, chip=None, name='Driver', channel=None, time_limit_on=False, **kwargs):
-        super(Driver, self).__init__(**kwargs)
+    def __init__(self, chip=None, name='Driver', channel=None, time_limit=False, **kwargs):
 
         #chip will provide interface to the hardware so driver can turn itself off and on in physical world
         self.chip = chip
@@ -15,9 +14,15 @@ class Driver(object):
         #initialize state to off
         self.state = "Off"
         self.state_timer = time.time()
+        #time limit caps amount of time driver can be in certain state
+        self.time_limit = time_limit
+        if time_limit:
+            self.max_time = 
 
-        #rename to include current id #, can't pass in arguments since it is binded at time of class creation so it will
-        #always be 0
+
+        #rename to include current id #, can't pass as optional keyword since those values are binded
+        #at time of class creation so the optional paramter would always be binded to 0
+
         self.name = name
         if self.name == 'Driver': self.name += '%d' % Driver.id
         self.id = Driver.id
@@ -26,9 +31,7 @@ class Driver(object):
         #control attribute can point to driver controller
         self.control = None
 
-        #set initial time when entering current state
-        self.begin_state_time = time.time()
-        self.time_limit_on = time_limit_on
+
 
     def get_state(self):
         return self.state
@@ -50,8 +53,8 @@ class Driver(object):
         if ((self.chip is not None) and (self.channel is not None)): self.chip.on(self.channel)
         self.state = "On"
         self.begin_state_time = time.time()
-        if self.time_limit_on:
-            time.sleep(self.time_limit_on)
+        if self.time_limit:
+            time.sleep(self.time_limit)
             self.turn_off()
 
     def turn_off(self):
