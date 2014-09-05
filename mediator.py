@@ -2,6 +2,7 @@ __author__ = 'Eric'
 
 import Queue
 import threading
+import message
 
 
 
@@ -38,6 +39,7 @@ class mediator(object):
 
     #maybe need to do lock and release for access the class mediator, worked ok in test
     #of twenty users, just with threads not in predictable chronological order
+    #user_task is passed as message with fields type(str), data([])
     def process_request(self, user_task):
         #signal is triggered upon completion of task
         signal = threading.Event()

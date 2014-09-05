@@ -41,8 +41,9 @@ class Logon_Client(object):
         dump(task_to_server, self.wfile)
         acknowledgement = load(self.rfile)
         if (acknowledgement.type != 'ack'):
-            print 'acknowledged not received', acknowledgement
-        print 'acknowledge received', acknowledgement
+            print 'client sent message but acknowledgement NOT received', acknowledgement
+        print 'client sent message and acknowledgement received'
+        print task_to_server
 
     #put error methods here
     def receive(self):
@@ -56,7 +57,8 @@ class Logon_Client(object):
             return False
         else:
             self.acknowledge()
-            print 'sent acknowledgement'
+            print 'client received message and sent acknowledgement'
+            print from_server
             return from_server
 
         #send back to acknowledge request received
@@ -75,7 +77,6 @@ class Logon_Client(object):
 
 
             response = self.receive()
-            print response
             if (response.data[0] == 's'):
                 print 'login success: %s' % response
                 return True
@@ -98,7 +99,6 @@ class Logon_Client(object):
             data = int(raw_input('select motor: '))
             self.send(message.Message(command, [data]))
             response = self.receive()
-            print response
             if (response.type == 'end'):
                 return
 

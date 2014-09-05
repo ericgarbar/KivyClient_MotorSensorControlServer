@@ -43,8 +43,8 @@ class Driver(object):
         return self.state == "On"
 
     def get_information(self):
-        return "{driver} on {chip} channel {channel}".\
-            format(driver = self.name, chip = self.chip.name, channel = self.channel)
+        return "{driver} on {chip} channel {channel} is {state}".\
+            format(driver = self.name, chip = 'chip', channel = self.channel, state=self.state)
 
     def turn_on(self): #note and is logical AND, where & is bitwise AND
         if ((self.chip is not None) and (self.channel is not None)): self.chip.on(self.channel)

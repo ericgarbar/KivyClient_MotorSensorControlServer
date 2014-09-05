@@ -22,7 +22,7 @@ class DriverControl(object):
 
     def __str__(self):
         #put names of drivers in list, then join into one long string concatenated string
-        return "\n".join([": ".join([d.get_name(), d.state]) for d in self.drivers])
+        return "\n".join([d.get_information() for d in self.drivers])
 
     def update(self):
         return self.__str__()
@@ -34,11 +34,14 @@ class DriverControl(object):
         if self.drivers[driverid].state == 'On':
             print "enter toggle off"
             self.turn_off(driverid)
-            return 'Off'
+            print self.update()
+            return self.update()
         else:
             if self.turn_on(driverid):
                 print "enter toggle on"
-                return 'On'
+                self.turn_on(driverid)
+                print self.update()
+                return self.update()
             else: return 'Off'
 
     def turn_on(self, driverid):

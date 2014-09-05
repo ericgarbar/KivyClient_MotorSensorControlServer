@@ -41,10 +41,10 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
     def send(self, type, data):
         to_client_message = message.Message(type, data)
         cPickle.dump(to_client_message, self.wfile, 2)
-        client_ack = self.receive()
+
+        client_ack = cPickle.load(self.rfile)
         if (client_ack.type != 'ack'):
-            print client_ack.type, 'not equal ack'
-        print 'acknowledge received'
+            self.logger
 
 
     #returns unpickled object from socket connection
@@ -52,22 +52,23 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
     #message has two fields type and data
     def receive(self):
         try:
-            response = cPickle.load(self.rfile)
+            user_request = cPickle.load(self.rfile)
         except EOFError as e:
             self.logger.error('no pickle sent to load: %s' % e)
         else:
             self.acknowledge()
-            return response
+            self.logger.debug('server received user request and sent acknowledgement')
+            self.logger.debug(user_request)
+            return user_request
 
     #send back to acknowledge request received
     def acknowledge(self):
         acknowledgement = message.Message("ack", ['time_sent_ack', 'time_rec_message'])
         cPickle.dump(acknowledgement, self.wfile, 2)
-        self.logger.info('acknowledge pickled and sent')
 
     def relay_request(self, client_request):
         #might change to different object for mediator to process
-        return message.Message('motor_response', mediator.process_request(client_request))
+        return ('motor_response', mediator.process_request(client_request))
 
     def handle(self):
 
@@ -96,7 +97,7 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
 
         while client_request.type != "end":
             response = self.relay_request(client_request)
-            self.send(response.type, response)
+            self.send(*response)
 
             client_request = self.receive()
             print "received %s request" % client_request
@@ -115,8 +116,7 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
 
     #checks user password parameters against self.user dict, where user = key, password = value
     #returns s for succes, u for incorrect user, p for incorrect password
-    #will log successful login as well, changes and returns socket.settimeout() to original value
-    #sends
+
     def check_user(self, user, password):
         #possibly more type checks before evaluating password to compare
         #possible to maybe unpickle and execute sent malicious code at this point
@@ -129,6 +129,8 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
         else:
             return 'p'
 
+    #will log successful login as well, changes and returns socket.settimeout() to original value
+    #sends
     def check_password(self):
 
         #client will send info such that user_data[0] = "username", user_data[1] = "password"
