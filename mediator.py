@@ -16,7 +16,7 @@ class mediator(object):
         self.stay_alive = threading.Event()
         self.stay_alive.set()
 
-        t = threading.Thread(target=self.run)
+        t = threading.Thread(target=self._run)
         t.setDaemon(True)
         t.start()
 
@@ -55,7 +55,7 @@ class mediator(object):
 
 
 
-    def run(self):
+    def _run(self):
         while(self.stay_alive.is_set()):
             #has to timeout in order to still check while condition even if queue is empty,
             #set timeout and block instead of not block so that it is not constantly cycling as well
