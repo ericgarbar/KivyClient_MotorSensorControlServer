@@ -3,6 +3,7 @@ __author__ = 'Eric'
 import Queue
 import threading
 import message
+import time
 
 
 
@@ -25,7 +26,9 @@ class mediator(object):
             'on': 0,
             'off':0,
             'toggle':0,
-            'update':1
+            'name': 0,
+            'update':1,
+            'timed_on':0
         }
 
         self.CONTROL_COMMANDS = {
@@ -33,6 +36,8 @@ class mediator(object):
             'off' : self.control.turn_off,
             'toggle': self.control.toggle_state,
             'update': self.control.update,
+            'timed_on': self.control.timed_on,
+            'name': self.control.change_name
         }
 
 
@@ -63,8 +68,9 @@ class mediator(object):
                 user_task, signal = self.task_queue.get(True, 0.1)[1]
                 print 'from queue', user_task
             except Queue.Empty as e:
-                #set to be woken up by queue when it is not empty
+                #should set to be woken up by queue when it is not empty
                 #then continue
+                time.sleep(0.1)
                 continue
             user_task.response = self.CONTROL_COMMANDS[user_task.type](*user_task.data)
             signal.set()

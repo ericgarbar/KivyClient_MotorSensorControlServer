@@ -1,39 +1,45 @@
 __author__ = 'Eric'
 
+__author__ = 'Eric'
+
 import socket
 from cPickle import dump, load
 import pprint
 import message
 
 
-SERVER_ADDRESS = ('localhost', 9000)
+SERVER_ADDRESSES = (('localhost', 9000), ('localbrost', 9001))
 SOCKET_TIMEOUT = 3
 
 
 class Logon_Client(object):
 
-    login_prompt = ('Username: ', 'Password: ')
 
-    def __init__(self):
-        self.connection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.connection.settimeout(SOCKET_TIMEOUT)
+    def __init__(self, SOCKET_TIMEOUT=SOCKET_TIMEOUT, SERVER_ADDRESSES=SERVER_ADDRESSES):
+        self.connections = dict()
 
-        try: #try to connect to server
-            self.connection.connect(SERVER_ADDRESS)
-        except socket.error:
-            print 'connection failed'
-            exit(1)
-        else: #create wfile for writing and rfile for reading pickled objects from
-            self.wfile = self.connection.makefile('wb', 0)
-            self.rfile = self.connection.makefile('rb', -1)
-            print'socket created with read and write file interface'
-            print self.rfile
-            first_ack = load(self.rfile) #get acknowledgement to send password
+        for address in SERVER_ADDRESSES:
+            self.connections[address[0]] = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            self.connections[address[0]].settimeout(SOCKET_TIMEOUT)
 
-            if first_ack.type == 'ack':
-                print 'received server acknowledgement'
-            else:
-                raise socket.error
+        for address in SERVER_ADDRESSES:
+
+            try: #try to connect to server
+                self.connections[address[0]].connect(address)
+            except socket.error:
+                print 'connection failed'
+                exit(1)
+            else: #create wfile for writing and rfile for reading pickled objects from
+                self.wfile = self.connections[address[0]].makefile('wb', 0)
+                self.rfile = self.connection[address[0]].makefile('rb', -1)
+                print'socket created with read and write file interface'
+                print self.rfile
+                first_ack = load(self.rfile) #give acknowledgement to send password
+
+                if first_ack.type == 'ack':
+                    print 'received server acknowledgement'
+                else:
+                    raise socket.error
 
 
 
@@ -118,6 +124,7 @@ class Logon_Client(object):
 if __name__ == '__main__':
     client = Logon_Client()
     client.login()
+
 
 
 

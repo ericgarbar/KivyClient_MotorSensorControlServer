@@ -11,7 +11,7 @@ class Driver(object):
         #chip will provide interface to the hardware so driver can turn itself off and on in physical world
         self.chip = chip
         self.channel = channel
-        if chip is None and channel is None:
+        if chip is None:
             self._abstract = True
         else:
             self._abstract = False
@@ -20,6 +20,7 @@ class Driver(object):
         #initialize state to off
         self.state = "Off"
         self.state_start_time = time.time()
+        print 'state_start_time', self.state_start_time
         #time limit caps amount of time driver can be in certain state
         self.time_limit = time_limit
         #max_time_limit is in seconds in order to ocmpare to time.time easily
@@ -34,7 +35,7 @@ class Driver(object):
 
         self.name = name
         if self.name == 'Driver': self.name += '%d' % Driver.id
-        self.id = Driver.id
+        self.id = None;
         Driver.id += 1
 
         #control attribute can point to driver controller
@@ -59,7 +60,7 @@ class Driver(object):
         seconds = seconds % 60
         hours = minutes / 60
         minutes = minutes % 60
-        return (hours, minutes, seconds)
+        return "%02d:%02d:%02d" % (hours, minutes, seconds)
     
     def p_state_time(self):
         return "hrs:{0} min:{1} sec:{2}".format(*self.get_state_time())
@@ -75,17 +76,7 @@ class Driver(object):
     def set_time_limit(self, minutes=0, hours=0, seconds=0):
         max_time_limit = minutes * 60 + hours * 3600 + seconds
 
-    #called from turn on if time_limit set to true and max_time set to nonzero number
-    #will turn off right away if max_time is set to negative
-    def _time_limit_monitor(self, start_time):
-        monitor_start_time = self.state_start_time
-        shutoff_time = self.state_start_time + self.max_time
-        #exits while loop if driver state is changed either by outside input or
-        #when shutoff time is reached since self.state_start_time will change
-        while(self.state_start_time == monitor_start_time):
-            if(time.time() > shutoff_time):
-                self.turn_off()
-            time.sleep(1)
+
 
 
     def turn_on(self):
@@ -96,6 +87,7 @@ class Driver(object):
             self.state_start_time = time.time()
             if self.time_limit and self.max_time:
                 self._max_time_timer = threading.Timer(self.max_time, self.turn_off)
+                self._max_time_timer.start()
 
     def turn_off(self):
         if self.state == 'On':
@@ -103,6 +95,7 @@ class Driver(object):
                 self.chip.off(self.channel)
             self.state = "Off"
             self.state_start_time = time.time()
+
         try:
             self._max_time_timer.cancel()
         except AttributeError as e:

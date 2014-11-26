@@ -1,0 +1,26 @@
+<NameScreen>:
+    new_name:new_name
+
+    BoxLayout:
+        orientation: 'vertical'
+
+        Label:
+            text: 'Enter a new name'
+            size_hint_y: 0.4
+            font_size: root.new_name.font_size
+
+        TextInput:
+            size_hint_y: 0.15
+            font_size: self.height * .7
+            id: new_name
+            on_text_validate: root.set_name('blah')
+
+        BoxLayout:
+            size_hint_y: 0.45
+            orientation: 'horizontal'
+            Button:
+                on_press:
+                text: 'Enter'
+            Button:
+                on_press: root.name_cancel()
+                text: 'Cancel'

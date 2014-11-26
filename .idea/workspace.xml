@@ -26,48 +26,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Logon_Client.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Logon_Client.py">
+      <file leaf-file-name="DriverControl.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controls/DriverControl.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="20" selection-start="3210" selection-end="3210" vertical-scroll-proportion="2.4909365" vertical-offset="0" max-vertical-offset="2108">
+            <state line="24" column="22" selection-start="820" selection-end="820" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1989">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Driver.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/drivers/Driver.py">
+      <file leaf-file-name="KivyClient.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Kivy_client/KivyClient.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="108" column="16" selection-start="3815" selection-end="3815" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="2550">
-              <folding>
-                <element signature="e#20#31#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Relay.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/drivers/Relay.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PWMMotor.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/drivers/PWMMotor.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SocketServer.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://C:/Python27/Lib/SocketServer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="592" column="0" selection-start="19152" selection-end="19152" vertical-scroll-proportion="0.0" vertical-offset="10064" max-vertical-offset="12529">
+            <state line="16" column="41" selection-start="494" selection-end="494" vertical-scroll-proportion="0.0" vertical-offset="1666" max-vertical-offset="4182">
               <folding />
             </state>
           </provider>
@@ -82,37 +53,68 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DriverControl.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controls/DriverControl.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="45" selection-start="819" selection-end="819" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1615">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="mediator.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mediator.py">
+        <entry file="file://$PROJECT_DIR$/server_rpi/mediator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="26" selection-start="1988" selection-end="1988" vertical-scroll-proportion="0.0" vertical-offset="1088" max-vertical-offset="1394">
+            <state line="28" column="22" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="1496">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="logging_test.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logging_test.py">
+      <file leaf-file-name="RaspberryPi_ServerProgram.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RaspberryPi_ServerProgram.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="41" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="408">
+            <state line="31" column="0" selection-start="935" selection-end="935" vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="646">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="thread_control_concept.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/thread_control_concept.py">
+      <file leaf-file-name="Server_RPi.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server_rpi/Server_RPi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="2363">
+            <state line="73" column="44" selection-start="2651" selection-end="2651" vertical-scroll-proportion="-0.45132744" vertical-offset="1241" max-vertical-offset="3298">
+              <folding>
+                <element signature="e#837#1195#0" expanded="false" />
+                <element signature="e#1377#1748#0" expanded="false" />
+                <element signature="e#1826#1958#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MultiServer_Client.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Kivy_client/MultiServer_Client.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="0" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="2414">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KivyClient.kv" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Kivy_client/KivyClient.kv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="19" selection-start="617" selection-end="617" vertical-scroll-proportion="0.0" vertical-offset="697" max-vertical-offset="1326">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Driver.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/drivers/Driver.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="23" selection-start="1355" selection-end="1355" vertical-scroll-proportion="0.0" vertical-offset="629" max-vertical-offset="2431">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PasswordScreen.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Kivy_client/PasswordScreen.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="37" selection-start="1262" selection-end="1262" vertical-scroll-proportion="0.0" vertical-offset="680" max-vertical-offset="1071">
               <folding />
             </state>
           </provider>
@@ -128,21 +130,45 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/message.py" />
         <option value="$PROJECT_DIR$/thread_control_concept.py" />
         <option value="$PROJECT_DIR$/logging_test.py" />
-        <option value="$PROJECT_DIR$/controls/DriverControl.py" />
-        <option value="$PROJECT_DIR$/Logon_Client.py" />
+        <option value="$PROJECT_DIR$/Update_Client.py" />
+        <option value="$PROJECT_DIR$/driverboard_client/driverboard.kv" />
+        <option value="$PROJECT_DIR$/driverboard_client/DriverBoard.py" />
+        <option value="$PROJECT_DIR$/GUI_client/DriverBoard.py" />
+        <option value="$PROJECT_DIR$/GUI_client/GUI.py" />
+        <option value="$PROJECT_DIR$/kv_tests/screen_test.py" />
+        <option value="$PROJECT_DIR$/kv_tests/PasswordScreen.py" />
+        <option value="$PROJECT_DIR$/kv_tests/PasswordScreen.kv" />
+        <option value="$PROJECT_DIR$/kv_tests/roottest.py" />
+        <option value="$PROJECT_DIR$/kv_tests/NameScreen.py" />
+        <option value="$PROJECT_DIR$/kv_tests/NameScreen.kv" />
         <option value="$PROJECT_DIR$/Server_RH.py" />
         <option value="$PROJECT_DIR$/mediator.py" />
+        <option value="$PROJECT_DIR$/GUI_client/NameScreen.py" />
+        <option value="$PROJECT_DIR$/GUI_client/NameScreen.kv" />
+        <option value="$PROJECT_DIR$/GUI_client/GUIBoard.kv" />
+        <option value="$PROJECT_DIR$/Server_RPi.py" />
+        <option value="$PROJECT_DIR$/RaspberryPi_ServerProgram.py" />
+        <option value="$PROJECT_DIR$/Logon_Client.py" />
+        <option value="$PROJECT_DIR$/message.py" />
+        <option value="$PROJECT_DIR$/GUI_client/GUI_Client.py" />
+        <option value="$PROJECT_DIR$/GUI_client/PasswordScreen.kv" />
+        <option value="$PROJECT_DIR$/GUI_client/PasswordScreen.py" />
         <option value="$PROJECT_DIR$/drivers/Driver.py" />
+        <option value="$PROJECT_DIR$/GUI_client/GUIBoard.py" />
+        <option value="$PROJECT_DIR$/controls/DriverControl.py" />
+        <option value="$PROJECT_DIR$/Kivy_client/GUIBoard.py" />
+        <option value="$PROJECT_DIR$/Kivy_client/KivyClient.py" />
+        <option value="$PROJECT_DIR$/server_rpi/Server_RPi.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="120" />
-    <option name="width" value="1184" />
-    <option name="height" value="768" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1320" />
+    <option name="height" value="784" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -188,6 +214,62 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Server_Logon_One" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Server_Logon_One" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server_rpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Server_Logon_One" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Server_Logon_One" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drivers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Server_Logon_One" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Server_Logon_One" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controls" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Server_Logon_One" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Server_Logon_One" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Kivy_client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope">
@@ -207,9 +289,11 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Plant_Automation_1(better_kivy-motor_control)" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/kv_tests/screen_test.py" />
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
+    <property name="SearchEverywhereHistory" value="" />
+    <property name="restartRequiresConfirmation" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -217,25 +301,30 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Eric\PycharmProjects\server_thread_practice\Server_Logon_One\GUI_client" />
+      <recent name="C:\Users\Eric\PycharmProjects\server_thread_practice\Server_Logon_One\kv_tests" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Eric\PycharmProjects\server_thread_practice\Server_Logon_One\server_rpi" />
       <recent name="C:\Users\Eric\PycharmProjects\server_thread_practice\Server_Logon_One\drivers" />
       <recent name="C:\Users\Eric\PycharmProjects\server_thread_practice\Server_Logon_One" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Driver">
-    <configuration default="false" name="Server_RH" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.KivyClient">
+    <configuration default="false" name="GUIBoard" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GUI_client" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Server_Logon_One" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Server_RH.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GUI_client/GUIBoard.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
@@ -243,7 +332,25 @@
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="Logon_Client" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="PasswordScreen (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GUI_client" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Server_Logon_One" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GUI_client/PasswordScreen.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="RaspberryPi_ServerProgram" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -255,61 +362,45 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Server_Logon_One" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Logon_Client.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RaspberryPi_ServerProgram.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="mediator" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="Server_RPi" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/server_rpi" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Server_Logon_One" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mediator.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/server_rpi/Server_RPi.py" />
       <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="logging_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="KivyClient" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Kivy_client" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Server_Logon_One" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/logging_test.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Driver" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/drivers" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Server_Logon_One" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/drivers/Driver.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Kivy_client/KivyClient.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
@@ -436,20 +527,60 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
-    <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.Server_RH" />
-      <item index="1" class="java.lang.String" itemvalue="Python.Logon_Client" />
-      <item index="2" class="java.lang.String" itemvalue="Python.mediator" />
-      <item index="3" class="java.lang.String" itemvalue="Python.logging_test" />
-      <item index="4" class="java.lang.String" itemvalue="Python.Driver" />
+    <configuration default="false" name="screen_test" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:/Python27/python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/kv_tests" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Server_Logon_One" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/kv_tests/screen_test.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="roottest" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:/Python27/python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Server_Logon_One" />
+      <option name="SCRIPT_NAME" value="roottest.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <list size="7">
+      <item index="0" class="java.lang.String" itemvalue="Python.screen_test" />
+      <item index="1" class="java.lang.String" itemvalue="Python.roottest" />
+      <item index="2" class="java.lang.String" itemvalue="Python.GUIBoard" />
+      <item index="3" class="java.lang.String" itemvalue="Python.PasswordScreen (1)" />
+      <item index="4" class="java.lang.String" itemvalue="Python.RaspberryPi_ServerProgram" />
+      <item index="5" class="java.lang.String" itemvalue="Python.Server_RPi" />
+      <item index="6" class="java.lang.String" itemvalue="Python.KivyClient" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.Driver" />
-        <item index="1" class="java.lang.String" itemvalue="Python.Logon_Client" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Server_RH" />
-        <item index="3" class="java.lang.String" itemvalue="Python.mediator" />
-        <item index="4" class="java.lang.String" itemvalue="Python.logging_test" />
+        <item index="0" class="java.lang.String" itemvalue="Python.KivyClient" />
+        <item index="1" class="java.lang.String" itemvalue="Python.GUIBoard" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Server_RPi" />
+        <item index="3" class="java.lang.String" itemvalue="Python.RaspberryPi_ServerProgram" />
+        <item index="4" class="java.lang.String" itemvalue="Python.PasswordScreen (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -480,28 +611,28 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="120" y="0" width="1184" height="768" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1320" height="784" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25171232" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17638037" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3986207" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32299012" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38344827" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956153" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956153" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -521,111 +652,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Logon_Client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="1921">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/message.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="4" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="323" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server_RH.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="210" column="0" selection-start="8032" selection-end="8032" vertical-scroll-proportion="0.0" vertical-offset="419" max-vertical-offset="3961" />
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/socket.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="223" column="0" selection-start="7712" selection-end="7712" vertical-scroll-proportion="0.0" vertical-offset="3791" max-vertical-offset="9843" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Logon_Client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="1921">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/message.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="4" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="323" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server_RH.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="210" column="0" selection-start="8032" selection-end="8032" vertical-scroll-proportion="0.0" vertical-offset="3275" max-vertical-offset="3961" />
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/socket.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="223" column="0" selection-start="7712" selection-end="7712" vertical-scroll-proportion="0.0" vertical-offset="3791" max-vertical-offset="9843" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Logon_Client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="1921">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/message.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server_RH.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="35" selection-start="3397" selection-end="3397" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3893" />
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/socket.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="223" column="0" selection-start="7712" selection-end="7712" vertical-scroll-proportion="0.0" vertical-offset="3791" max-vertical-offset="9843" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Logon_Client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="40" selection-start="2310" selection-end="2310" vertical-scroll-proportion="0.0" vertical-offset="1205" max-vertical-offset="1904">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/message.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="4" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="323" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server_RH.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="35" selection-start="3397" selection-end="3397" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3893" />
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/socket.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="223" column="0" selection-start="7712" selection-end="7712" vertical-scroll-proportion="0.0" vertical-offset="3791" max-vertical-offset="9843" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Logon_Client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="0" selection-start="2417" selection-end="2417" vertical-scroll-proportion="0.0" vertical-offset="1309" max-vertical-offset="1904">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/message.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="4" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="323" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server_RH.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="39" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3791" />
-      </provider>
-    </entry>
     <entry file="file://C:/Python27/Lib/socket.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="223" column="0" selection-start="7712" selection-end="7712" vertical-scroll-proportion="0.0" vertical-offset="3791" max-vertical-offset="9792" />
@@ -633,9 +659,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Logon_Client.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="0" selection-start="2417" selection-end="2417" vertical-scroll-proportion="0.0" vertical-offset="1462" max-vertical-offset="1870">
-          <folding />
-        </state>
+        <state line="86" column="0" selection-start="2417" selection-end="2417" vertical-scroll-proportion="0.0" vertical-offset="1462" max-vertical-offset="1870" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/message.py">
@@ -643,7 +667,7 @@
         <state line="12" column="4" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="323" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Server_RH.py">
+    <entry file="file://$PROJECT_DIR$/server_rpi/Server_RPi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="39" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0" vertical-offset="1720" max-vertical-offset="3791" />
       </provider>
@@ -655,9 +679,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Logon_Client.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="26" selection-start="2416" selection-end="2416" vertical-scroll-proportion="0.0" vertical-offset="1445" max-vertical-offset="1870">
-          <folding />
-        </state>
+        <state line="85" column="26" selection-start="2416" selection-end="2416" vertical-scroll-proportion="0.0" vertical-offset="1445" max-vertical-offset="1870" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/message.py">
@@ -665,7 +687,7 @@
         <state line="12" column="4" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="323" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Server_RH.py">
+    <entry file="file://$PROJECT_DIR$/server_rpi/Server_RPi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="91" column="8" selection-start="3111" selection-end="3111" vertical-scroll-proportion="0.0" vertical-offset="1394" max-vertical-offset="3808" />
       </provider>
@@ -677,9 +699,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Logon_Client.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="26" selection-start="2416" selection-end="2416" vertical-scroll-proportion="0.0" vertical-offset="1445" max-vertical-offset="1870">
-          <folding />
-        </state>
+        <state line="85" column="26" selection-start="2416" selection-end="2416" vertical-scroll-proportion="0.0" vertical-offset="1445" max-vertical-offset="1870" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/message.py">
@@ -687,16 +707,14 @@
         <state line="12" column="4" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="323" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Server_RH.py">
+    <entry file="file://$PROJECT_DIR$/server_rpi/Server_RPi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3757" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Logon_Client.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1734">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1734" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/message.py">
@@ -704,14 +722,9 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Server_RH.py">
+    <entry file="file://$PROJECT_DIR$/server_rpi/Server_RPi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3128" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controls/SensorControl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="678" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drivers/__init__.py">
@@ -729,23 +742,170 @@
         <state line="1" column="0" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="136" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Update_Client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="22" selection-start="930" selection-end="930" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="884" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controls/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/logging_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="41" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
+        <state line="5" column="41" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drivers/Relay.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="427" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drivers/PWMMotor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="429" />
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/kivy/clock.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="311" column="31" selection-start="9622" selection-end="9622" vertical-scroll-proportion="0.0" vertical-offset="5021" max-vertical-offset="10132" />
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/kivy/lang.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="837" column="0" selection-start="25148" selection-end="25148" vertical-scroll-proportion="0.0" vertical-offset="13806" max-vertical-offset="31654" />
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/kivy/uix/floatlayout.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="0" selection-start="2453" selection-end="2453" vertical-scroll-proportion="0.5265487" vertical-offset="1190" max-vertical-offset="2210" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kv_tests/NameScreen.kv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="25" selection-start="513" selection-end="513" vertical-scroll-proportion="0.0" vertical-offset="127" max-vertical-offset="527" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kv_tests/roottest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="4" selection-start="459" selection-end="459" vertical-scroll-proportion="0.0" vertical-offset="161" max-vertical-offset="578" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kv_tests/screen_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="0" selection-start="878" selection-end="984" vertical-scroll-proportion="0.0" vertical-offset="189" max-vertical-offset="867" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kv_tests/NameScreen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="27" selection-start="497" selection-end="497" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kv_tests/PasswordScreen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="57" selection-start="1387" selection-end="1387" vertical-scroll-proportion="0.0" vertical-offset="518" max-vertical-offset="918" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kv_tests/PasswordScreen.kv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="33" selection-start="932" selection-end="932" vertical-scroll-proportion="0.0" vertical-offset="444" max-vertical-offset="1377" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controls/SensorControl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thread_control_concept.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="17" selection-start="741" selection-end="741" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="2363">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/message.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="24" selection-start="525" selection-end="525" vertical-scroll-proportion="0.0" vertical-offset="8" max-vertical-offset="493" />
+      </provider>
+    </entry>
     <entry file="file://C:/Python27/Lib/SocketServer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="592" column="0" selection-start="19152" selection-end="19152" vertical-scroll-proportion="0.0" vertical-offset="9846" max-vertical-offset="12461">
+        <state line="418" column="0" selection-start="13895" selection-end="13895" vertical-scroll-proportion="0.0" vertical-offset="6909" max-vertical-offset="12461" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Logon_Client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="863" selection-end="863" vertical-scroll-proportion="0.0" vertical-offset="381" max-vertical-offset="2295" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kivy_client/NameScreen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="25" selection-start="721" selection-end="721" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kivy_client/NameScreen.kv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="117" selection-start="538" selection-end="538" vertical-scroll-proportion="0.0" vertical-offset="246" max-vertical-offset="646" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kivy_client/PasswordScreen.kv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="19" selection-start="744" selection-end="744" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="1513" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kivy_client/PasswordScreen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="37" selection-start="1262" selection-end="1262" vertical-scroll-proportion="0.0" vertical-offset="257" max-vertical-offset="935">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://C:/Python27/Lib/socket.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="323" column="0" selection-start="11153" selection-end="11153" vertical-scroll-proportion="0.0" vertical-offset="5290" max-vertical-offset="9792" />
+        <state line="278" column="0" selection-start="9652" selection-end="9652" vertical-scroll-proportion="0.3325" vertical-offset="4542" max-vertical-offset="9792" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kivy_client/MultiServer_Client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0" vertical-offset="697" max-vertical-offset="2414">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server_rpi/mediator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="22" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0" vertical-offset="331" max-vertical-offset="1445">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drivers/Driver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="23" selection-start="1355" selection-end="1355" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="2414">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controls/DriverControl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="22" selection-start="820" selection-end="820" vertical-scroll-proportion="0.0" vertical-offset="263" max-vertical-offset="1972">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kivy_client/KivyClient.kv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="19" selection-start="617" selection-end="617" vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="1326">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kivy_client/KivyClient.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="41" selection-start="494" selection-end="494" vertical-scroll-proportion="0.0" vertical-offset="1666" max-vertical-offset="4182">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controls/PlantControl.py">
@@ -755,64 +915,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controls/DriverControl.py">
+    <entry file="file://$PROJECT_DIR$/RaspberryPi_ServerProgram.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="45" selection-start="819" selection-end="819" vertical-scroll-proportion="0.0" vertical-offset="325" max-vertical-offset="1615">
+        <state line="31" column="0" selection-start="935" selection-end="935" vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="544">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/message.py">
+    <entry file="file://$PROJECT_DIR$/server_rpi/Server_RPi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="4" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thread_control_concept.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0" vertical-offset="1701" max-vertical-offset="2363">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server_RH.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="25" selection-start="3580" selection-end="3580" vertical-scroll-proportion="1.0261941" vertical-offset="813" max-vertical-offset="3604" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mediator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="26" selection-start="1988" selection-end="1988" vertical-scroll-proportion="0.0" vertical-offset="698" max-vertical-offset="1360">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drivers/PWMMotor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="429">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drivers/Relay.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="427">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drivers/Driver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="16" selection-start="3815" selection-end="3815" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="2550">
+        <state line="73" column="44" selection-start="2651" selection-end="2651" vertical-scroll-proportion="-0.45132744" vertical-offset="1241" max-vertical-offset="3298">
           <folding>
-            <element signature="e#20#31#0" expanded="true" />
+            <element signature="e#837#1195#0" expanded="false" />
+            <element signature="e#1377#1748#0" expanded="false" />
+            <element signature="e#1826#1958#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Logon_Client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="20" selection-start="3210" selection-end="3210" vertical-scroll-proportion="2.4909365" vertical-offset="0" max-vertical-offset="2108">
-          <folding />
         </state>
       </provider>
     </entry>

@@ -1,9 +1,9 @@
+from server_rpi import mediator as module_med
+
 __author__ = 'Eric'
 
 import threading
-import Queue
 import time
-import mediator as module_med
 #testing modulator import version of mediator, why mediator is
 #commented out, not sure if necessary if name is overridden??
 class task(object):

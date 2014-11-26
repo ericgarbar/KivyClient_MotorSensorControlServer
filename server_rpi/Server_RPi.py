@@ -1,26 +1,18 @@
+from server_rpi import mediator
+
 __author__ = 'Eric'
 
 import SocketServer
-import threading
-import collections
 import cPickle
 import time
 import logging
 import socket
-import thread
-import select
 import message
-import Queue
-import mediator
-from controls import DriverControl
-from drivers import Driver
 
 
-SERVER_ADDRESS = ('localhost', 9000)
 TIMEOUT = 120
-
 logging.basicConfig(level=logging.DEBUG,
-                    format='%(name)s: %(message)s',
+                format='%(name)s: %(message)s',
                     )
 
 
@@ -35,7 +27,7 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
 
     @staticmethod
     def add_mediator(mediator):
-        MyRequestHandler.mediator = mediator
+        MyRequestHandler.my_mediator = mediator
 
     #send to_client parameter client pickling and then dumping into self.wfile
     def send(self, type, data):
@@ -58,7 +50,7 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
             self.logger.error('no pickle sent to load: %s' % e)
         else:
             self.acknowledge()
-            self.logger.debug('server received user request and sent acknowledgement')
+            self.logger.debug('server received user request and client sent acknowledgement')
             self.logger.debug(user_request)
             return user_request
 
@@ -69,7 +61,7 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
 
     def relay_request(self, client_request):
         #might change to different object for mediator to process
-        return ('motor_response', mediator.process_request(client_request))
+        return ('motor_response', MyRequestHandler.my_mediator.process_request(client_request))
 
     def handle(self):
 
@@ -79,7 +71,7 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
 
         #users is dictionary of allowable user names and corresponding passwords
         #probably should go somewhere else eventually, encrypted file or something...
-        self.users = {'gardener':'', 'gardener2':'gardengarden'}
+        self.users = {'gardener':'', '':'', 'gardener2':'gardengarden'}
 
         MyRequestHandler.total_clients += 1 #increase to reflect new number of users logged in
 
@@ -89,28 +81,17 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
 
         if not self.check_password():
             self.logger.error('incorrect login closing connection')
+            self.finish()
             return #return goes back to __init__ call where finish is then called to clean up socket, files, etc
 
 
-        #receive can throw timeout error
+        #receive can throw timeout error and handle timeout error, will call finish and return
         client_request = self.receive()
         assert client_request!=None
         while client_request.type != "end":
             response = self.relay_request(client_request) #returns tuple for values to send
             self.send(*response)
             client_request = self.receive()
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     #checks user password parameters against self.user dict, where user = key, password = value
@@ -193,22 +174,28 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
 
 
 
-class MyServer(SocketServer.ThreadingTCPServer):
+class Server_RPi(SocketServer.ThreadingTCPServer):
 
-    def __init__(self, server_address, request_handler):
-        SocketServer.ThreadingTCPServer.__init__(self, server_address, request_handler)
-
-
-
-drivers = [Driver.Driver(chip=None, channel=i) for i in range(0,8)]
-motor_control = DriverControl.DriverControl(drivers=drivers)
-mediator = mediator.mediator(motor_control)
-MyRequestHandler.add_mediator(mediator)
-
-Rpi_Server = MyServer(SERVER_ADDRESS, MyRequestHandler)
-threading.Thread(target=Rpi_Server.serve_forever).start()
+    def __init__(self, server_address, motorcontrol):
+        self.my_mediator = mediator.mediator(motorcontrol)
+        MyRequestHandler.add_mediator(self.my_mediator)
+        SocketServer.ThreadingTCPServer.__init__(self, server_address, MyRequestHandler)
 
 
+
+
+
+if __name__ == '__main__':
+    SERVER_ADDRESS_ONE = ('localhost', 9000)
+    import threading
+    from drivers.Driver import Driver
+    from controls.DriverControl import DriverControl
+
+    drivers = [Driver(chip=None, channel=i) for i in range(0,8)]
+    motor_control = DriverControl(drivers=drivers, name='this control')
+
+    this_RPi_Server = Server_RPi(SERVER_ADDRESS_ONE, motor_control)
+    threading.Thread(target=this_RPi_Server.serve_forever).start()
 
 
 

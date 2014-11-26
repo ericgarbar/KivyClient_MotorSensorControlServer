@@ -1,13 +1,16 @@
 __author__ = 'Eric'
 from drivers.Driver import Driver
+import threading
 
 class DriverControl(object):
 
     #initialize drivers and pass as a list
     #assumed that index will be passed to identify driver to control
-    def __init__(self, drivers=None, max_drivers_on=None, **kwargs):
+    index = 0
+    def __init__(self, drivers=None, max_drivers_on=None, name="driver control" + str(index), **kwargs):
 
         #implement error checking for no drivers
+        self.name = name
         self.total_drivers_on = 0
         self.max_drivers_on = max_drivers_on
         self.haslimit = False
@@ -15,18 +18,29 @@ class DriverControl(object):
         self.at_limit = False
         self.drivers = drivers
         self.total_drivers = len(drivers)
+        index = 0
         for driver in drivers:
+            driver.id = index
             driver.control = self
+            index += 1
 
 
 
     def __str__(self):
         #put names of drivers in list, then join into one long string concatenated string
-        return "\n".join([d.get_information() for d in self.drivers])
+        return "\n".join([str(d) for d in self.drivers])
 
-    def update(self):
+    def update_string(self, *args):
         return self.__str__()
 
+    #provide updated list of drivers as flattend list of driver tuples
+    def update(self, *args):
+        return[(driver.id, driver.name, driver.state, driver.get_state_time()) for driver in self.drivers]
+
+    #changes driver's name at driver_id to new_name, can add further checks later such as no duplicates
+    def change_name(self, driverid, new_name):
+        self.drivers[driverid].name = new_name
+        return self.update()
 
     #toggle_state checks state of passed driverid and then hands off to appropriate turn_on, turn_off method
     #and returns new state, bookkeeping is done in turn_off, turn_on including checking if at max drivers
@@ -62,10 +76,18 @@ class DriverControl(object):
 
     def turn_off(self, driverid):
         if self.drivers[driverid].state == 'Off': return 'Driver already off!'
-        else:
-            self.drivers[driverid].state = 'Off'
+        else: #driver on
+            self.drivers[driverid].turn_off()
             self.total_drivers_on -= 1
             return True
+
+
+    def timed_on(self, channel, seconds=0, minutes=0, hours=0):
+        self.turn_on(channel)
+        turn_off_time = hours * 3600 + minutes * 60 + seconds
+        threading.Timer(turn_off_time, self.turn_off, args=[channel]).start()
+        return True
+
 
 
 
