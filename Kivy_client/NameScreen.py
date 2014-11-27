@@ -13,6 +13,7 @@ class NameScreen(Screen):
     #identifier is used to tell the app, what widget's name is to be changed
     identifier = ObjectProperty(None)
     new_name = ObjectProperty(None)
+
 class NameScreenApp(App):
 
     def build(self):
