@@ -28,7 +28,8 @@ class mediator(object):
             'toggle':0,
             'name': 0,
             'update':1,
-            'timed_on':0
+            'timed_on':0,
+            'timer': 0
         }
 
         self.CONTROL_COMMANDS = {
@@ -36,8 +37,8 @@ class mediator(object):
             'off' : self.control.turn_off,
             'toggle': self.control.toggle_state,
             'update': self.control.update,
-            'timed_on': self.control.timed_on,
-            'name': self.control.change_name
+            'name': self.control.change_name,
+            'timer': self.control.set_timer
         }
 
 

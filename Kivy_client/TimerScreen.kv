@@ -1,11 +1,15 @@
 <TimerScreen>:
+    hours_input: hours
+    minutes_input: minutes
+    seconds_input: seconds
+
     BoxLayout:
         orientation: 'vertical'
         padding: 15
         spacing: 15
 
         Label:
-            text: 'Timer for'.format(root.driver_name)
+            text: 'Set timer for {0}'.format(root.name)
             size_hint_y: 0.4
             font_size: seconds.font_size
             size_hint_x: 1
@@ -23,7 +27,6 @@
 
             LimitTextInput:
                 max_char: 2
-                ranges: [(0,9), (0,9)]
                 upper_limit: 24
                 id: hours
 
@@ -34,7 +37,7 @@
             LimitTextInput:
                 id: minutes
                 max_char: 2
-                ranges: [(0, 5), (0, 9)]
+                upper_limit: 59
                 on_text_validate: hours.focus = True
 
 
@@ -46,7 +49,7 @@
                 id: seconds
                 max_char: 2
                 on_text_validate: minutes.focus = True
-                ranges: [(0, 5), (0, 9)]
+                upper_limit: 59
                 focus: True
 
         BoxLayout:
@@ -55,10 +58,13 @@
             padding:
             spacing: 15
             Button:
-                on_press: app._name_event(root.identifier, new_name.text); new_name.text = ''; app.back_to_main()
+                on_press:
+                    app._timer_event(int(root.driverid), root.get_time(hours.text, minutes.text, seconds.text))
+                    root.reset_fields()
+                    app.back_to_main()
                 text: 'Enter'
             Button:
-                on_press: new_name.text = ''; app.back_to_main()
+                on_press: root.reset_fields(); app.back_to_main()
                 text: 'Cancel'
 
 <LimitTextInput>:

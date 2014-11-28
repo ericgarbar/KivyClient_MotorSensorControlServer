@@ -1,6 +1,8 @@
 __author__ = 'Eric'
 from drivers.Driver import Driver
 import threading
+from Track_Timer import Track_Timer
+from time import time
 
 class DriverControl(object):
 
@@ -13,16 +15,21 @@ class DriverControl(object):
         self.name = name
         self.total_drivers_on = 0
         self.max_drivers_on = max_drivers_on
+
         self.haslimit = False
+
         if self.max_drivers_on is not None: self.haslimit = True
         self.at_limit = False
         self.drivers = drivers
         self.total_drivers = len(drivers)
+
         index = 0
         for driver in drivers:
             driver.id = index
             driver.control = self
             index += 1
+
+        self.timers = {}
 
 
 
@@ -35,7 +42,11 @@ class DriverControl(object):
 
     #provide updated list of drivers as flattend list of driver tuples
     def update(self, *args):
-        return[(driver.id, driver.name, driver.state, driver.get_state_time()) for driver in self.drivers]
+        information = {}
+        information['drivers'] = \
+            [(driver.id, driver.name, driver.state, driver.get_state_time()) for driver in self.drivers]
+        information['timers'] =  [(int(driverid), timer.remaining_time) for driverid, timer in self.timers.iteritems()]
+        return information
 
     #changes driver's name at driver_id to new_name, can add further checks later such as no duplicates
     def change_name(self, driverid, new_name):
@@ -78,15 +89,22 @@ class DriverControl(object):
         if self.drivers[driverid].state == 'Off': return 'Driver already off!'
         else: #driver on
             self.drivers[driverid].turn_off()
+            if (self.timers.has_key(str(driverid))):
+                self.timers[str(driverid)].cancel()
+                self.timers.pop(str(driverid))
             self.total_drivers_on -= 1
             return True
 
 
-    def timed_on(self, channel, seconds=0, minutes=0, hours=0):
+    def set_timer(self, channel, duration):
+        if (self.timers.has_key(str(channel))):
+            old_timer = self.timers.pop(str(channel))
+            old_timer.cancel()
+
         self.turn_on(channel)
-        turn_off_time = hours * 3600 + minutes * 60 + seconds
-        threading.Timer(turn_off_time, self.turn_off, args=[channel]).start()
-        return True
+        thread = threading.Timer(duration, self.turn_off, args=[channel])
+        self.timers[str(channel)]=(Track_Timer(time(), duration, channel, thread))
+        return self.update()
 
 
 

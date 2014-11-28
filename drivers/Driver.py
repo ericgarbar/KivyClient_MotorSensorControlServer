@@ -19,7 +19,7 @@ class Driver(object):
 
         #initialize state to off
         self.state = "Off"
-        self.state_start_time = time.time()
+        self.state_start_time = int(time.time())
         print 'state_start_time', self.state_start_time
         #time limit caps amount of time driver can be in certain state
         self.time_limit = time_limit
@@ -67,8 +67,8 @@ class Driver(object):
 
     def get_state_start_time(self):
         #convert raw data into hour:minutes:seconds time struct
-        minutes = int(self.state_start_time/60)
-        seconds = int(self.state_start_time % 60)
+        minutes = self.state_start_time/60
+        seconds = self.state_start_time % 60
         hours = minutes / 60
         minutes = minutes % 60
         return (hours, minutes, seconds)

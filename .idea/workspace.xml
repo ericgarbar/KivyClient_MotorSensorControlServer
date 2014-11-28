@@ -26,13 +26,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TimerScreen.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="TimerScreen.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Kivy_client/TimerScreen.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="27" selection-start="446" selection-end="446" vertical-scroll-proportion="0.6197917" vertical-offset="0" max-vertical-offset="1020">
-              <folding>
-                <element signature="e#20#76#0" expanded="true" />
-              </folding>
+            <state line="46" column="24" selection-start="1556" selection-end="1556" vertical-scroll-proportion="0.0" vertical-offset="782" max-vertical-offset="1224">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DriverControl.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controls/DriverControl.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="101" column="30" selection-start="3688" selection-end="3688" vertical-scroll-proportion="0.0" vertical-offset="1612" max-vertical-offset="2295">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -40,17 +47,37 @@
       <file leaf-file-name="TimerScreen.kv" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Kivy_client/TimerScreen.kv">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="25" selection-start="680" selection-end="680" vertical-scroll-proportion="-11.653846" vertical-offset="156" max-vertical-offset="1292">
+            <state line="28" column="27" selection-start="662" selection-end="662" vertical-scroll-proportion="0.0" vertical-offset="293" max-vertical-offset="1394">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lang.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://C:/Python27/Lib/site-packages/kivy/lang.py">
+      <file leaf-file-name="KivyClient.kv" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Kivy_client/KivyClient.kv">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1217" column="0" selection-start="38928" selection-end="38928" vertical-scroll-proportion="0.0" vertical-offset="20689" max-vertical-offset="31960">
+            <state line="51" column="20" selection-start="959" selection-end="967" vertical-scroll-proportion="0.0" vertical-offset="762" max-vertical-offset="1088">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KivyClient.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Kivy_client/KivyClient.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="243" column="35" selection-start="8357" selection-end="8357" vertical-scroll-proportion="0.0" vertical-offset="1230" max-vertical-offset="4284">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PasswordScreen.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Kivy_client/PasswordScreen.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="31" selection-start="1294" selection-end="1294" vertical-scroll-proportion="0.44837758" vertical-offset="393" max-vertical-offset="1071">
+              <folding>
+                <element signature="e#21#61#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -58,43 +85,7 @@
       <file leaf-file-name="ScheduleScreen.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Kivy_client/ScheduleScreen.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NameScreen.kv" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Kivy_client/NameScreen.kv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="26" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Relay.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/drivers/Relay.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NameScreen.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Kivy_client/NameScreen.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="592" selection-end="592" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PasswordScreen.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Kivy_client/PasswordScreen.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="35" selection-start="687" selection-end="687" vertical-scroll-proportion="0.0" vertical-offset="572" max-vertical-offset="935">
+            <state line="2" column="0" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="153">
               <folding />
             </state>
           </provider>
@@ -103,16 +94,25 @@
       <file leaf-file-name="PasswordScreen.kv" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Kivy_client/PasswordScreen.kv">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="15" selection-start="875" selection-end="882" vertical-scroll-proportion="-4.3076925" vertical-offset="483" max-vertical-offset="1513">
+            <state line="31" column="13" selection-start="733" selection-end="738" vertical-scroll-proportion="0.0" vertical-offset="310" max-vertical-offset="1513">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="screen_test.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kv_tests/screen_test.py">
+      <file leaf-file-name="Track_Timer.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controls/Track_Timer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="0" selection-start="878" selection-end="984" vertical-scroll-proportion="0.0" vertical-offset="595" max-vertical-offset="867">
+            <state line="21" column="29" selection-start="744" selection-end="744" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="595">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SensorControl.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controls/SensorControl.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
               <folding />
             </state>
           </provider>
@@ -153,22 +153,28 @@
         <option value="$PROJECT_DIR$/GUI_client/GUI_Client.py" />
         <option value="$PROJECT_DIR$/GUI_client/PasswordScreen.kv" />
         <option value="$PROJECT_DIR$/GUI_client/PasswordScreen.py" />
-        <option value="$PROJECT_DIR$/drivers/Driver.py" />
         <option value="$PROJECT_DIR$/GUI_client/GUIBoard.py" />
-        <option value="$PROJECT_DIR$/controls/DriverControl.py" />
         <option value="$PROJECT_DIR$/Kivy_client/GUIBoard.py" />
-        <option value="$PROJECT_DIR$/Kivy_client/KivyClient.py" />
         <option value="$PROJECT_DIR$/server_rpi/Server_RPi.py" />
         <option value="$PROJECT_DIR$/Kivy_client/ScheduleScreen.py" />
         <option value="$PROJECT_DIR$/Kivy_client/NameScreen.py" />
-        <option value="$PROJECT_DIR$/Kivy_client/TimerScreen.kv" />
+        <option value="$PROJECT_DIR$/Kivy_client/PasswordScreen.py" />
+        <option value="$PROJECT_DIR$/drivers/Driver.py" />
+        <option value="$PROJECT_DIR$/server_rpi/mediator.py" />
+        <option value="$PROJECT_DIR$/controls/Track_Timer.py" />
+        <option value="$PROJECT_DIR$/Kivy_client/KivyClient.kv" />
         <option value="$PROJECT_DIR$/Kivy_client/TimerScreen.py" />
+        <option value="$PROJECT_DIR$/Kivy_client/TimerScreen.kv" />
+        <option value="$PROJECT_DIR$/controls/DriverControl.py" />
+        <option value="$PROJECT_DIR$/Kivy_client/KivyClient.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1264" />
-    <option name="height" value="768" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1319" />
+    <option name="height" value="784" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -325,47 +331,7 @@
       <recent name="C:\Users\Eric\PycharmProjects\server_thread_practice\Server_Logon_One" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.TimerScreen">
-    <configuration default="false" name="GUIBoard" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GUI_client" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Server_Logon_One" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GUI_client/GUIBoard.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PyDebugRunner" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PyDebugRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Server_RPi" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/server_rpi" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Server_Logon_One" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/server_rpi/Server_RPi.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PyDebugRunner" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PyDebugRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.KivyClient">
     <configuration default="false" name="KivyClient" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -415,6 +381,42 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Server_Logon_One" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Kivy_client/TimerScreen.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="RaspberryPi_ServerProgram" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Server_Logon_One" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RaspberryPi_ServerProgram.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Track_Timer" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/controls" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Server_Logon_One" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/controls/Track_Timer.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
@@ -582,19 +584,19 @@
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Python.screen_test" />
       <item index="1" class="java.lang.String" itemvalue="Python.roottest" />
-      <item index="2" class="java.lang.String" itemvalue="Python.GUIBoard" />
-      <item index="3" class="java.lang.String" itemvalue="Python.Server_RPi" />
-      <item index="4" class="java.lang.String" itemvalue="Python.KivyClient" />
-      <item index="5" class="java.lang.String" itemvalue="Python.NameScreen" />
-      <item index="6" class="java.lang.String" itemvalue="Python.TimerScreen" />
+      <item index="2" class="java.lang.String" itemvalue="Python.KivyClient" />
+      <item index="3" class="java.lang.String" itemvalue="Python.NameScreen" />
+      <item index="4" class="java.lang.String" itemvalue="Python.TimerScreen" />
+      <item index="5" class="java.lang.String" itemvalue="Python.RaspberryPi_ServerProgram" />
+      <item index="6" class="java.lang.String" itemvalue="Python.Track_Timer" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.TimerScreen" />
-        <item index="1" class="java.lang.String" itemvalue="Python.NameScreen" />
-        <item index="2" class="java.lang.String" itemvalue="Python.KivyClient" />
-        <item index="3" class="java.lang.String" itemvalue="Python.GUIBoard" />
-        <item index="4" class="java.lang.String" itemvalue="Python.Server_RPi" />
+        <item index="0" class="java.lang.String" itemvalue="Python.KivyClient" />
+        <item index="1" class="java.lang.String" itemvalue="Python.RaspberryPi_ServerProgram" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Track_Timer" />
+        <item index="3" class="java.lang.String" itemvalue="Python.TimerScreen" />
+        <item index="4" class="java.lang.String" itemvalue="Python.NameScreen" />
       </list>
     </recent_temporary>
   </component>
@@ -625,20 +627,20 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1264" height="768" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1319" height="784" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18349358" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18265541" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3986207" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39210156" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46206897" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -663,14 +665,11 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server_rpi/Server_RPi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="39" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0" vertical-offset="1720" max-vertical-offset="3791" />
-      </provider>
-    </entry>
     <entry file="file://C:/Python27/Lib/socket.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="379" column="0" selection-start="13518" selection-end="13518" vertical-scroll-proportion="0.0" vertical-offset="6443" max-vertical-offset="9843" />
@@ -786,11 +785,6 @@
         <state line="36" column="33" selection-start="932" selection-end="932" vertical-scroll-proportion="0.0" vertical-offset="444" max-vertical-offset="1377" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controls/SensorControl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/thread_control_concept.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="17" selection-start="741" selection-end="741" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="2363">
@@ -803,64 +797,14 @@
         <state line="16" column="24" selection-start="525" selection-end="525" vertical-scroll-proportion="0.0" vertical-offset="8" max-vertical-offset="493" />
       </provider>
     </entry>
-    <entry file="file://C:/Python27/Lib/SocketServer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="418" column="0" selection-start="13895" selection-end="13895" vertical-scroll-proportion="0.0" vertical-offset="6909" max-vertical-offset="12461" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Logon_Client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="863" selection-end="863" vertical-scroll-proportion="0.0" vertical-offset="381" max-vertical-offset="2295" />
-      </provider>
-    </entry>
     <entry file="file://C:/Python27/Lib/socket.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="278" column="0" selection-start="9652" selection-end="9652" vertical-scroll-proportion="0.3325" vertical-offset="4542" max-vertical-offset="9792" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Kivy_client/MultiServer_Client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0" vertical-offset="697" max-vertical-offset="2414" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server_rpi/mediator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="22" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0" vertical-offset="331" max-vertical-offset="1445" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drivers/Driver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="23" selection-start="1355" selection-end="1355" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="2414" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Kivy_client/KivyClient.kv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="19" selection-start="617" selection-end="617" vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="1326" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controls/PlantControl.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1496" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RaspberryPi_ServerProgram.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="935" selection-end="935" vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="544" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server_rpi/Server_RPi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="38" selection-start="3972" selection-end="3972" vertical-scroll-proportion="2.1061947" vertical-offset="0" max-vertical-offset="3298" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Kivy_client/KivyClient.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="41" selection-start="494" selection-end="494" vertical-scroll-proportion="0.0" vertical-offset="1666" max-vertical-offset="4182" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controls/DriverControl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="22" selection-start="820" selection-end="820" vertical-scroll-proportion="0.0" vertical-offset="263" max-vertical-offset="1972" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kv_tests/NameScreen.py">
@@ -873,25 +817,78 @@
         <state line="50" column="57" selection-start="1387" selection-end="1387" vertical-scroll-proportion="0.0" vertical-offset="2" max-vertical-offset="918" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kv_tests/screen_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="878" selection-end="984" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="833">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python27/Lib/site-packages/kivy/lang.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1217" column="0" selection-start="38928" selection-end="38928" vertical-scroll-proportion="0.0" vertical-offset="20250" max-vertical-offset="31654">
-          <folding />
-        </state>
+        <state line="1217" column="0" selection-start="38928" selection-end="38928" vertical-scroll-proportion="0.0" vertical-offset="20250" max-vertical-offset="31654" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kv_tests/screen_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="0" selection-start="878" selection-end="984" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="833" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kivy_client/NameScreen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="34" selection-start="197" selection-end="197" vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="493" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kivy_client/NameScreen.kv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="0" selection-start="569" selection-end="569" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="646" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RaspberryPi_ServerProgram.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="0" selection-start="935" selection-end="935" vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="544" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drivers/Relay.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drivers/Driver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="48" selection-start="560" selection-end="560" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="2414" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Logon_Client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="15" selection-start="1478" selection-end="1489" vertical-scroll-proportion="-3.9230769" vertical-offset="663" max-vertical-offset="2244" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kivy_client/MultiServer_Client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="2363" />
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/SocketServer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="592" column="0" selection-start="19152" selection-end="19152" vertical-scroll-proportion="0.0" vertical-offset="9885" max-vertical-offset="12461" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server_rpi/mediator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="0" selection-start="2335" selection-end="2335" vertical-scroll-proportion="0.0" vertical-offset="1113" max-vertical-offset="1462" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controls/SensorControl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kivy_client/PasswordScreen.kv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="13" selection-start="733" selection-end="738" vertical-scroll-proportion="0.0" vertical-offset="310" max-vertical-offset="1513">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server_rpi/Server_RPi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="0" selection-start="885" selection-end="885" vertical-scroll-proportion="0.0" vertical-offset="464" max-vertical-offset="3604" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Kivy_client/ScheduleScreen.py">
@@ -901,46 +898,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Kivy_client/PasswordScreen.py">
+    <entry file="file://$PROJECT_DIR$/Kivy_client/KivyClient.kv">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="35" selection-start="687" selection-end="687" vertical-scroll-proportion="0.0" vertical-offset="572" max-vertical-offset="935">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Kivy_client/NameScreen.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="592" selection-end="592" vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="493">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Kivy_client/NameScreen.kv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="26" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="646">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Kivy_client/PasswordScreen.kv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="15" selection-start="875" selection-end="882" vertical-scroll-proportion="-4.3076925" vertical-offset="483" max-vertical-offset="1513">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Kivy_client/TimerScreen.kv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="25" selection-start="680" selection-end="680" vertical-scroll-proportion="-11.653846" vertical-offset="156" max-vertical-offset="1292">
+        <state line="51" column="20" selection-start="959" selection-end="967" vertical-scroll-proportion="0.0" vertical-offset="762" max-vertical-offset="1088">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Kivy_client/TimerScreen.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="27" selection-start="446" selection-end="446" vertical-scroll-proportion="0.6197917" vertical-offset="0" max-vertical-offset="1020">
+        <state line="46" column="24" selection-start="1556" selection-end="1556" vertical-scroll-proportion="0.0" vertical-offset="782" max-vertical-offset="1224">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kivy_client/TimerScreen.kv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="27" selection-start="662" selection-end="662" vertical-scroll-proportion="0.0" vertical-offset="293" max-vertical-offset="1394">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controls/Track_Timer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="29" selection-start="744" selection-end="744" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="595">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controls/DriverControl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="101" column="30" selection-start="3688" selection-end="3688" vertical-scroll-proportion="0.0" vertical-offset="1612" max-vertical-offset="2295">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kivy_client/KivyClient.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="243" column="35" selection-start="8357" selection-end="8357" vertical-scroll-proportion="0.0" vertical-offset="1230" max-vertical-offset="4284">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kivy_client/PasswordScreen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="31" selection-start="1294" selection-end="1294" vertical-scroll-proportion="0.44837758" vertical-offset="393" max-vertical-offset="1071">
           <folding>
-            <element signature="e#20#76#0" expanded="true" />
+            <element signature="e#21#61#0" expanded="true" />
           </folding>
         </state>
       </provider>

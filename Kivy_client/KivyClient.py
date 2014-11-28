@@ -16,6 +16,7 @@ from kivy.clock import Clock
 from kivy.uix.screenmanager import ScreenManager, Screen
 from PasswordScreen import PasswordScreen
 from NameScreen import NameScreen
+from TimerScreen import TimerScreen
 from kivy.uix.button import Button
 from kivy.uix.textinput import TextInput
 #from chips import MCP23017
@@ -23,6 +24,7 @@ from kivy.uix.textinput import TextInput
 from kivy.lang import Builder
 Builder.load_file('PasswordScreen.kv', rulesonly=True)
 Builder.load_file('NameScreen.kv', rulesonly=True)
+Builder.load_file('TimerScreen.kv', rulesonly=True)
 
 class Drivers_Screen(Screen):
     pass
@@ -66,12 +68,6 @@ class DriverInfoWidget(BoxLayout):
         else:
             self.remaining_label.text = 'Remaining: {i}'.format(i=self.max_drivers_on - newtotal)
 
-class ServerNavBar(BoxLayout):
-    pass
-
-class ServerButton(Button):
-    name = StringProperty()
-    status = StringProperty()
 
 
 
@@ -86,6 +82,7 @@ class DriverWidget(BoxLayout):
     state = StringProperty('')
     toggle_btn = ObjectProperty(None)
     rename_btn = ObjectProperty(None)
+    timer_btn = ObjectProperty(None)
     time_widget = ObjectProperty(None)
 
     def __init__(self, driverid, name, state, state_time, *args, **kwargs):
@@ -112,16 +109,14 @@ class DriverWidget(BoxLayout):
     def update_time(self):
         if self.state == 'Off':
             self.time_widget.text = '00:00:00'
+            self.timer_btn.text = 'Timer'
         else:
             self.time_widget.text = self.state_time
 
 
 
-
-
-
-
-
+    def update_remaining_time(self, remaining_time):
+        self.timer_btn.text = remaining_time
 
 class KivyClientApp(App):
 
@@ -132,8 +127,11 @@ class KivyClientApp(App):
         self.sm = ScreenManager()
         self.password_screen = PasswordScreen(name='PASSWORD_SCREEN')
         self.sm.add_widget(self.password_screen)
+        #self.password_screen.user_input.focus = True
+
         self.drivers_screen = Drivers_Screen(name='DRIVERS_SCREEN')
         self.name_screen = NameScreen(name='NAME_SCREEN')
+        self.timer_screen = TimerScreen(name='TIMER_SCREEN')
 
         self.client = GUI_Client()
 
@@ -150,6 +148,10 @@ class KivyClientApp(App):
         self.non_update_message = True
         self.request = message.Message('name', [driverid, new_name])
 
+    def _timer_event(self, driverid, time):
+        self.non_update_message = True
+        self.request = message.Message('timer', [driverid, time])
+
     def request_server_info(self, dt):
         if self.non_update_message:
             print self.request
@@ -160,7 +162,8 @@ class KivyClientApp(App):
             self.client.send(message.Message('update', ['update info']))
         new_driver_info = self.client.receive()
         assert new_driver_info.type == 'motor_response', 'unrecognized response type %s' % new_driver_info.type
-        self._update_GUI(new_driver_info.data)
+        self.timers = new_driver_info.data['timers']
+        self._update_GUI(new_driver_info.data['drivers'])
 
     def _update_GUI(self, new_info):
 
@@ -175,12 +178,15 @@ class KivyClientApp(App):
     def _update_times(self, dt):
         for driver in self.widget_drivers:
             driver.update_time()
+        for driverid, remaining_time in self.timers:
+            self.widget_drivers[driverid].update_remaining_time(remaining_time)
 
     def _generate_drivers_screen(self):
         self.client.send(message.Message('update', ['update info']))
         print 'requested server info'
         #each driver in driver_info is a tuple (id, name, state, state_time) representing a driver on the server side
-        for driver in self.client.receive().data:
+        driver_information = self.client.receive().data
+        for driver in driver_information['drivers']:
             print driver
             self.drivers_panel.add_widget(DriverWidget(*driver))
 
@@ -212,6 +218,11 @@ class KivyClientApp(App):
         self.name_screen.identifier = driverid
         self.sm.switch_to(self.name_screen, direction='right')
 
+    def set_timer(self, driverid, name):
+        self.timer_screen.name = name
+        self.timer_screen.driverid = driverid
+        self.sm.switch_to(self.timer_screen, direction='right')
+        self.timer_screen.seconds_input.focus = True
 
     def back_to_main(self):
         self.sm.switch_to(self.drivers_screen, direction='left')
@@ -231,10 +242,5 @@ class GUI_Client(Logon_Client.Logon_Client):
 
             response = self.receive()
             return response.data[0]
-
-
-
-
-
 
 KivyClientApp().run()

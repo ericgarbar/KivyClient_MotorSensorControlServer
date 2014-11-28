@@ -11,30 +11,15 @@
 <DriversPanel>
     orientation: 'vertical'
 
-
-<ServerNavBar>
-    orientation: 'vertical'
-    padding: 10
-    spacing: 5
-    ServerButton:
-    ServerButton:
-    ServerButton:
-
-<ServerButton>
-    on_press: app.change_server()
-
-
-
-
-
-
 <DriverWidget>
     spacing: 5
     padding: 10
 
     orientation: 'horizontal'
     rbtn: relay_btn
-    time_widget: timelabel
+    time_widget: time_on_label
+    timer_btn: timerbtn
+
 
     Button:
         text: 'Edit'
@@ -57,14 +42,15 @@
         on_press: app._toggle_event(root.driverid)
 
     Label:
-        text: ''
-        halign: 'left' #default
-        height: self.parent.height
-        id: timelabel
+        text: root.name
+        halign: 'right'
+        height:self.parent.height
+        id: time_on_label
 
     Button:
         text: 'Timer'
         id: timerbtn
+        on_press: app.set_timer(root.driverid, root.name)
 
 
 
